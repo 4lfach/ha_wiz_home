@@ -3,7 +3,7 @@
 import logging
 from typing import Any
 
-from pywizlight import (
+from .pywizlight.effect_manager import (
     EffectDetails,
     EffectStep,
     ModifierType,
