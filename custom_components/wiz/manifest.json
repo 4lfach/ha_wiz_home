@@ -1,5 +1,5 @@
 {
-  "domain": "wiz alfa",
+  "domain": "wiz_alfa",
   "name": "WiZ alfa",
   "codeowners": ["@4lfach"],
   "config_flow": true,
