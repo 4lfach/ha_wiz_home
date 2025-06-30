@@ -1,0 +1,518 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "wiz_home_config",
+  "data": {
+    "url": "https://wiz-s3-local-integration-dev-artifacts.s3.eu-west-1.amazonaws.com/9975029742c4040440fdb7461e854be5b8ff105dd2209f6de59fbb0dd2bf8e13.json?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=IQoJb3JpZ2luX2VjELn%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMSJHMEUCIQC5XhQpNMvardFpgBQSsU3q60D2x38Q9%2FfBhB5bn8n%2FVgIgKC6AQTdFAjNJBi67jZXtKETpeo%2BUJhIo8tsdbvqRCYMquwUIov%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAFGgwyOTIwNTYxMzk1NjMiDD%2FTcoD8CvMv8uGCsCqPBe3OaDQzPaCglq48HNUYZiibeopdlCY71%2Bw3i8knSjFlhAK6zCyDYOyycCUJmORPt6EVoWzoz79SR2kq1ASGrfJ4kyrKAN49Of2pOlnJgXD5wEGYz0c4uKZHSTvB%2FjdtuABebBTD%2BEgItqWOC%2FlhxwF8v%2BY45axHpxFRjNyfvOG4IcudTsmTzJCyHmOKtU0sVjiGZaLEFbUfA7fmWID8OIzT84Vb9XRhZTR1XSD7t0530baHEMsgJoj%2F6Gc0M7f7SSKzUV9EBcZ%2FdnWYILlqFM9Yb9LbT4rQ3BCdgiQAgKGufLFP6CWnhRA1zNqyEI5AxUhscx9GhU38VBEHnNVo7sCjAlOUy%2FLNoTd487pYP6CJDOAKZgdMmN64gvFmLiTqBTY6UlyegQ6u2rOGUvrtqbulDszdy2Z%2BCqrM9Uj3bKu0QET3L12qrwFpQOl7MADueOJzKDfFlyXfJ2vJun1kZrVE1MqV%2Bmz74JXLAhEY5vg%2FI7i%2BDdDJAdCorBYqCcvaCV3lCLG0mrmfGVKA%2FFAqfcpc8pASRPlFkaBO1%2BVkSvQZQsSGcpXncfERxrCvMYzvOE6ei56HtK277X2SP%2FRKBnJxBigo8g6YfMw9nNx7hK7oVVOfxkuu0riQN5xwRYGSvolJKnZd7QW8hjziy9%2Bs8skPoEXrDFVmSJd6j8qx7pGXsjFYhnECduP7eg2odl3BerJHRI4zfDs3%2BNHxMsGUI%2BB%2Byo%2F7%2BbZyj2J6deDfq1NQQbvKTZJhc%2F1AoHKfj1i7LlcFxXQAiOyv53Im1%2B%2BFJCVBQI0rlFR0R4%2Bh66ngXLpNpzuBEAuD%2B7Eg5UitPzzurQ1V1FTFfL%2FHApat4jQsprfF5Hu986rICfxcrSM6eqww8pzPwgY6sQGd98YcuSClHPRASBvn3m0aGNyPbUXbWvJYFLVlE%2B0vx8O0uw4S3UTKwxHmS9KU%2Fq5O0UaHtJU2Z1%2BS8bAsQQiYy66Qrv0TlukqpzYFQM1W8WyIRXZPJQV0theOG%2BGNVlDnlOAQC08OqjdFWhFljRCpf9ug4cAqh%2FfYUZaczMWRSb2%2B9VhV7yNmEXh4iaW6WQSTcXx6x9AfbH6E%2B4HLMBQu3em1%2FDr27i0i28eEJO2U3dM%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAUH77HA4VZLSNTIQQ%2F20250619%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20250619T085321Z&X-Amz-SignedHeaders=host&X-Amz-Expires=900&X-Amz-Signature=6036416ae7bab9b67742403e547ab7d0e1dc3e4dd4d03757886d6edd8856dc2d",
+    "config": {
+      "name": "Alfa's little space",
+      "home_id": 206812,
+      "region": "eu",
+      "udp_signing_key": "0250b91f3aa0449488ef678191d6da1d",
+      "version": "1.0",
+      "creation_date": "2025-06-04T01:44:10+0000",
+      "update_date": "2025-06-18T10:06:08+0000",
+      "rooms": [
+        {
+          "room_id": 803004,
+          "name": "Playroom",
+          "type": "PLAYROOM",
+          "creation_date": "2025-06-05T01:28:54+0000",
+          "update_date": "2025-06-19T08:46:59+0000"
+        },
+        {
+          "room_id": 803067,
+          "name": "Table",
+          "type": "OFFICE",
+          "creation_date": "2025-06-19T06:12:43+0000",
+          "update_date": "2025-06-19T07:19:09+0000"
+        }
+      ],
+      "custom_effects": [
+        {
+          "effect_id": 1001,
+          "device_type": "light",
+          "name": "effect_1",
+          "elm": {
+            "type": 1,
+            "modifier": 2,
+            "gradient": true,
+            "initStep": 1,
+            "rand": 0,
+            "steps": [
+              [0, 255, 0, 0, 0, 0, 0, 50, 500, 500, 0, 0, 0],
+              [0, 0, 255, 0, 0, 0, 0, 50, 500, 500, 0, 0, 0],
+              [0, 0, 0, 255, 0, 0, 0, 50, 500, 500, 0, 0, 0],
+              [0, 0, 0, 0, 255, 0, 0, 50, 500, 500, 0, 0, 0]
+            ]
+          },
+          "state": true,
+          "duration": 10
+        },
+        {
+          "effect_id": 1002,
+          "device_type": "light",
+          "name": "effect_2_sunset_glow",
+          "elm": {
+            "type": 1,
+            "modifier": 2,
+            "gradient": true,
+            "initStep": 1,
+            "rand": 0,
+            "steps": [
+              [0, 255, 69, 0, 0, 0, 0, 80, 1000, 800, 0, 0, 0],
+              [0, 220, 20, 60, 0, 0, 0, 70, 1000, 800, 0, 0, 0],
+              [0, 139, 0, 139, 0, 0, 0, 60, 1000, 800, 0, 0, 0],
+              [0, 75, 0, 130, 0, 0, 0, 50, 1000, 800, 0, 0, 0]
+            ]
+          },
+          "state": true,
+          "duration": 15
+        },
+        {
+          "effect_id": 1003,
+          "device_type": "light",
+          "name": "effect3_ocean_waves",
+          "elm": {
+            "type": 1,
+            "modifier": 1,
+            "gradient": true,
+            "initStep": 1,
+            "rand": 0,
+            "steps": [
+              [0, 0, 105, 148, 0, 0, 0, 60, 800, 600, 0, 0, 0],
+              [0, 0, 191, 255, 0, 0, 0, 60, 800, 600, 0, 0, 0],
+              [0, 30, 144, 255, 0, 0, 0, 80, 800, 600, 0, 0, 0],
+              [0, 0, 105, 148, 0, 0, 0, 60, 800, 600, 0, 0, 0]
+            ]
+          },
+          "state": true,
+          "duration": 12
+        }
+      ],
+      "devices": [
+        {
+          "device_id": 1182924,
+          "type": "light",
+          "room_id": 803004,
+          "group_id": null,
+          "name": "11",
+          "mac_address": "cc40855d27d4",
+          "fw_version": "1.34.204",
+          "traits": {
+            "is_dimmable": true,
+            "is_tunable_white": true,
+            "white_range": [
+              2200,
+              6500
+            ],
+            "is_tunable_color": true,
+            "supports_light_mode": true
+          },
+          "creation_date": "2025-06-05T01:29:38+0000",
+          "update_date": "2025-06-19T08:46:59+0000"
+        },
+        {
+          "device_id": 1182925,
+          "type": "light",
+          "room_id": 803004,
+          "group_id": null,
+          "name": "2",
+          "mac_address": "cc40855b8db4",
+          "fw_version": "1.34.204",
+          "traits": {
+            "is_dimmable": true,
+            "is_tunable_white": true,
+            "white_range": [
+              2200,
+              6500
+            ],
+            "is_tunable_color": true,
+            "supports_light_mode": true
+          },
+          "creation_date": "2025-06-05T01:29:38+0000",
+          "update_date": "2025-06-19T08:46:59+0000"
+        },
+        {
+          "device_id": 1182926,
+          "type": "light",
+          "room_id": 803004,
+          "group_id": null,
+          "name": "14",
+          "mac_address": "cc40855b7cf2",
+          "fw_version": "1.34.204",
+          "traits": {
+            "is_dimmable": true,
+            "is_tunable_white": true,
+            "white_range": [
+              2200,
+              6500
+            ],
+            "is_tunable_color": true,
+            "supports_light_mode": true
+          },
+          "creation_date": "2025-06-05T01:29:38+0000",
+          "update_date": "2025-06-19T08:46:59+0000"
+        },
+        {
+          "device_id": 1182927,
+          "type": "light",
+          "room_id": 803004,
+          "group_id": null,
+          "name": "4",
+          "mac_address": "cc40855b9a14",
+          "fw_version": "1.34.204",
+          "traits": {
+            "is_dimmable": true,
+            "is_tunable_white": true,
+            "white_range": [
+              2200,
+              6500
+            ],
+            "is_tunable_color": true,
+            "supports_light_mode": true
+          },
+          "creation_date": "2025-06-05T01:29:38+0000",
+          "update_date": "2025-06-19T08:46:59+0000"
+        },
+        {
+          "device_id": 1182929,
+          "type": "light",
+          "room_id": 803004,
+          "group_id": null,
+          "name": "3",
+          "mac_address": "cc40855b7a76",
+          "fw_version": "1.34.204",
+          "traits": {
+            "is_dimmable": true,
+            "is_tunable_white": true,
+            "white_range": [
+              2200,
+              6500
+            ],
+            "is_tunable_color": true,
+            "supports_light_mode": true
+          },
+          "creation_date": "2025-06-05T01:29:55+0000",
+          "update_date": "2025-06-19T08:46:59+0000"
+        },
+        {
+          "device_id": 1182930,
+          "type": "light",
+          "room_id": 803004,
+          "group_id": null,
+          "name": "16",
+          "mac_address": "cc40855b804e",
+          "fw_version": "1.34.204",
+          "traits": {
+            "is_dimmable": true,
+            "is_tunable_white": true,
+            "white_range": [
+              2200,
+              6500
+            ],
+            "is_tunable_color": true,
+            "supports_light_mode": true
+          },
+          "creation_date": "2025-06-05T01:29:55+0000",
+          "update_date": "2025-06-19T08:46:59+0000"
+        },
+        {
+          "device_id": 1182931,
+          "type": "light",
+          "room_id": 803004,
+          "group_id": null,
+          "name": "18",
+          "mac_address": "cc40855d1822",
+          "fw_version": "1.34.204",
+          "traits": {
+            "is_dimmable": true,
+            "is_tunable_white": true,
+            "white_range": [
+              2200,
+              6500
+            ],
+            "is_tunable_color": true,
+            "supports_light_mode": true
+          },
+          "creation_date": "2025-06-05T01:30:38+0000",
+          "update_date": "2025-06-19T08:46:59+0000"
+        },
+        {
+          "device_id": 1182932,
+          "type": "light",
+          "room_id": 803004,
+          "group_id": null,
+          "name": "12",
+          "mac_address": "cc40855ba1b2",
+          "fw_version": "1.34.204",
+          "traits": {
+            "is_dimmable": true,
+            "is_tunable_white": true,
+            "white_range": [
+              2200,
+              6500
+            ],
+            "is_tunable_color": true,
+            "supports_light_mode": true
+          },
+          "creation_date": "2025-06-05T01:30:38+0000",
+          "update_date": "2025-06-19T08:46:59+0000"
+        },
+        {
+          "device_id": 1182933,
+          "type": "light",
+          "room_id": 803004,
+          "group_id": null,
+          "name": "5",
+          "mac_address": "cc40855b8e40",
+          "fw_version": "1.34.204",
+          "traits": {
+            "is_dimmable": true,
+            "is_tunable_white": true,
+            "white_range": [
+              2200,
+              6500
+            ],
+            "is_tunable_color": true,
+            "supports_light_mode": true
+          },
+          "creation_date": "2025-06-05T01:30:38+0000",
+          "update_date": "2025-06-19T08:46:59+0000"
+        },
+        {
+          "device_id": 1182934,
+          "type": "light",
+          "room_id": 803004,
+          "group_id": null,
+          "name": "7",
+          "mac_address": "cc40855ba272",
+          "fw_version": "1.34.204",
+          "traits": {
+            "is_dimmable": true,
+            "is_tunable_white": true,
+            "white_range": [
+              2200,
+              6500
+            ],
+            "is_tunable_color": true,
+            "supports_light_mode": true
+          },
+          "creation_date": "2025-06-05T01:30:51+0000",
+          "update_date": "2025-06-19T08:46:59+0000"
+        },
+        {
+          "device_id": 1182935,
+          "type": "light",
+          "room_id": 803004,
+          "group_id": null,
+          "name": "15",
+          "mac_address": "cc40855b80be",
+          "fw_version": "1.34.204",
+          "traits": {
+            "is_dimmable": true,
+            "is_tunable_white": true,
+            "white_range": [
+              2200,
+              6500
+            ],
+            "is_tunable_color": true,
+            "supports_light_mode": true
+          },
+          "creation_date": "2025-06-05T01:31:02+0000",
+          "update_date": "2025-06-19T08:46:59+0000"
+        },
+        {
+          "device_id": 1182936,
+          "type": "light",
+          "room_id": 803004,
+          "group_id": null,
+          "name": "17",
+          "mac_address": "cc40855b7eb8",
+          "fw_version": "1.34.204",
+          "traits": {
+            "is_dimmable": true,
+            "is_tunable_white": true,
+            "white_range": [
+              2200,
+              6500
+            ],
+            "is_tunable_color": true,
+            "supports_light_mode": true
+          },
+          "creation_date": "2025-06-05T01:31:02+0000",
+          "update_date": "2025-06-19T08:46:59+0000"
+        },
+        {
+          "device_id": 1182937,
+          "type": "light",
+          "room_id": 803004,
+          "group_id": null,
+          "name": "13",
+          "mac_address": "cc40855b79cc",
+          "fw_version": "1.34.204",
+          "traits": {
+            "is_dimmable": true,
+            "is_tunable_white": true,
+            "white_range": [
+              2200,
+              6500
+            ],
+            "is_tunable_color": true,
+            "supports_light_mode": true
+          },
+          "creation_date": "2025-06-05T01:40:43+0000",
+          "update_date": "2025-06-19T08:46:59+0000"
+        },
+        {
+          "device_id": 1182938,
+          "type": "light",
+          "room_id": 803004,
+          "group_id": null,
+          "name": "9",
+          "mac_address": "cc40855d023a",
+          "fw_version": "1.34.204",
+          "traits": {
+            "is_dimmable": true,
+            "is_tunable_white": true,
+            "white_range": [
+              2200,
+              6500
+            ],
+            "is_tunable_color": true,
+            "supports_light_mode": true
+          },
+          "creation_date": "2025-06-05T01:40:44+0000",
+          "update_date": "2025-06-19T08:46:59+0000"
+        },
+        {
+          "device_id": 1182939,
+          "type": "light",
+          "room_id": 803004,
+          "group_id": null,
+          "name": "8",
+          "mac_address": "cc40855b7ca8",
+          "fw_version": "1.34.204",
+          "traits": {
+            "is_dimmable": true,
+            "is_tunable_white": true,
+            "white_range": [
+              2200,
+              6500
+            ],
+            "is_tunable_color": true,
+            "supports_light_mode": true
+          },
+          "creation_date": "2025-06-05T01:50:53+0000",
+          "update_date": "2025-06-19T08:46:59+0000"
+        },
+        {
+          "device_id": 1182940,
+          "type": "light",
+          "room_id": 803004,
+          "group_id": null,
+          "name": "10",
+          "mac_address": "cc40855ba1c2",
+          "fw_version": "1.34.204",
+          "traits": {
+            "is_dimmable": true,
+            "is_tunable_white": true,
+            "white_range": [
+              2200,
+              6500
+            ],
+            "is_tunable_color": true,
+            "supports_light_mode": true
+          },
+          "creation_date": "2025-06-05T01:50:53+0000",
+          "update_date": "2025-06-19T08:46:59+0000"
+        },
+        {
+          "device_id": 1182941,
+          "type": "light",
+          "room_id": 803004,
+          "group_id": null,
+          "name": "19",
+          "mac_address": "cc40855b9c32",
+          "fw_version": "1.34.204",
+          "traits": {
+            "is_dimmable": true,
+            "is_tunable_white": true,
+            "white_range": [
+              2200,
+              6500
+            ],
+            "is_tunable_color": true,
+            "supports_light_mode": true
+          },
+          "creation_date": "2025-06-05T01:50:54+0000",
+          "update_date": "2025-06-19T08:46:59+0000"
+        },
+        {
+          "device_id": 1182942,
+          "type": "light",
+          "room_id": 803004,
+          "group_id": null,
+          "name": "6",
+          "mac_address": "cc40855ba280",
+          "fw_version": "1.34.204",
+          "traits": {
+            "is_dimmable": true,
+            "is_tunable_white": true,
+            "white_range": [
+              2200,
+              6500
+            ],
+            "is_tunable_color": true,
+            "supports_light_mode": true
+          },
+          "creation_date": "2025-06-05T01:50:54+0000",
+          "update_date": "2025-06-19T08:46:59+0000"
+        },
+        {
+          "device_id": 1182943,
+          "type": "light",
+          "room_id": 803004,
+          "group_id": null,
+          "name": "20",
+          "mac_address": "cc40855ba466",
+          "fw_version": "1.34.204",
+          "traits": {
+            "is_dimmable": true,
+            "is_tunable_white": true,
+            "white_range": [
+              2200,
+              6500
+            ],
+            "is_tunable_color": true,
+            "supports_light_mode": true
+          },
+          "creation_date": "2025-06-05T01:51:01+0000",
+          "update_date": "2025-06-19T08:46:59+0000"
+        },
+        {
+          "device_id": 1183109,
+          "type": "light",
+          "room_id": 803067,
+          "group_id": null,
+          "name": "Light under",
+          "mac_address": "cc40855bcc4c",
+          "fw_version": "1.34.204",
+          "traits": {
+            "is_dimmable": true,
+            "is_tunable_white": true,
+            "white_range": [
+              2200,
+              6500
+            ],
+            "is_tunable_color": true,
+            "supports_light_mode": true
+          },
+          "creation_date": "2025-06-19T08:48:19+0000",
+          "update_date": "2025-06-19T08:51:00+0000"
+        }
+      ]
+    },
+    "downloaded_at": 711358.899796556
+  }
+}
