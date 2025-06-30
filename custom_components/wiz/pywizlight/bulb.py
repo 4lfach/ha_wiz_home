@@ -9,7 +9,7 @@ from typing import Any, Callable, Dict, List, Optional, Tuple, Union, cast
 
 from pywizlight._version import __version__ as pywizlight_version
 from pywizlight.bulblibrary import BulbType
-from pywizlight.effect_manager import PreviewEffect
+from pywizlight import PreviewEffect
 from pywizlight.exceptions import (
     WizLightConnectionError,
     WizLightMethodNotFound,
