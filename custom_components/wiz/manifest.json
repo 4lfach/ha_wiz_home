@@ -21,7 +21,7 @@
       "macaddress": "6C2990*"
     },
     {
-      "hostname": "wiz_*"
+      "hostname": "wiz_alfa_*"
     }
   ],
   "documentation": "https://www.home-assistant.io/integrations/wiz",
