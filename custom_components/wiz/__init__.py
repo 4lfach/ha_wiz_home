@@ -6,8 +6,8 @@ from datetime import timedelta
 import logging
 from typing import Any
 
-from .pywizlight.bulb import PilotParser, wizlight
-from .pywizlight.bulb import PIR_SOURCE
+from pywizlight.bulb import PilotParser, wizlight
+from pywizlight.bulb import PIR_SOURCE
 
 from .custom_effect import CustomEffectManager
 from .storage import WizHomeConfigStorage

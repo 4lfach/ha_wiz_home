@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from collections.abc import Callable
 
-from .pywizlight.bulb import PIR_SOURCE
+from pywizlight.bulb import PIR_SOURCE
 
 from homeassistant.components.binary_sensor import (
     BinarySensorDeviceClass,

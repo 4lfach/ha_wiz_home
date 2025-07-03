@@ -8,7 +8,7 @@ import os
 from typing import Any
 
 import aiofiles
-from .pywizlight.bulblibrary import BulbType, BulbClass
+from pywizlight.bulblibrary import BulbType, BulbClass
 
 from homeassistant.core import HomeAssistant
 

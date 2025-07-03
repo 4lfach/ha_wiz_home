@@ -5,8 +5,8 @@ from __future__ import annotations
 import logging
 from typing import Any
 
-from .pywizlight.bulb import wizlight
-from .pywizlight.discovery import DiscoveredBulb
+from pywizlight.bulb import wizlight
+from pywizlight.discovery import DiscoveredBulb
 import voluptuous as vol
 
 from homeassistant.components import onboarding
