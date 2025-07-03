@@ -1,10 +1,11 @@
 """WiZ integration light platform."""
 
 from __future__ import annotations
+
 import logging
 from typing import Any
 
-from pywizlight.bulb import PilotBuilder
+from pywizlight import PilotBuilder
 from pywizlight.bulblibrary import BulbClass, BulbType, Features
 from pywizlight.scenes import get_id_from_scene_name
 
@@ -21,6 +22,7 @@ from homeassistant.components.light import (
 )
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.entity_platform import AddConfigEntryEntitiesCallback
+
 from . import CustomEffectManager, WizConfigEntry
 from .const import WIZ_EXCEPTIONS
 from .entity import WizToggleEntity
@@ -32,7 +34,9 @@ _LOGGER = logging.getLogger(__name__)
 _LOGGER.setLevel(logging.DEBUG)
 
 
-def _async_pilot_builder(custom_effect_manager: CustomEffectManager, **kwargs: Any) -> PilotBuilder:
+def _async_pilot_builder(
+    custom_effect_manager: CustomEffectManager, **kwargs: Any
+) -> PilotBuilder:
     """Create the PilotBuilder for turn on."""
     brightness = kwargs.get(ATTR_BRIGHTNESS)
 
@@ -52,7 +56,10 @@ def _async_pilot_builder(custom_effect_manager: CustomEffectManager, **kwargs: A
         effect_name = kwargs[ATTR_EFFECT]
 
         # Check if it's a custom effect
-        if custom_effect_manager and effect_name in custom_effect_manager.get_effect_names():
+        if (
+            custom_effect_manager
+            and effect_name in custom_effect_manager.get_effect_names()
+        ):
             # For custom effects, return None to indicate special handling is needed
             return None
 
@@ -138,7 +145,10 @@ class WizBulbEntity(WizToggleEntity, LightEntity):
         if pilot_builder is None and ATTR_EFFECT in kwargs:
             # Handle custom effect
             effect_name = kwargs[ATTR_EFFECT]
-            if custom_effect_manager and effect_name in custom_effect_manager.get_effect_names():
+            if (
+                custom_effect_manager
+                and effect_name in custom_effect_manager.get_effect_names()
+            ):
                 effect_names = custom_effect_manager.get_effect_names()
                 custom_effects = custom_effect_manager.get_preview_effects()
                 effect_index = effect_names.index(effect_name)
