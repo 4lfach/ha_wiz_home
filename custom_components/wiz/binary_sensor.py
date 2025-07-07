@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from collections.abc import Callable
 
-from pywizlight.bulb import PIR_SOURCE
+from .pywizlight.bulb import PIR_SOURCE
 
 from homeassistant.components.binary_sensor import (
     BinarySensorDeviceClass,
@@ -17,9 +17,9 @@ from homeassistant.helpers.dispatcher import async_dispatcher_connect
 from homeassistant.helpers.entity_platform import AddConfigEntryEntitiesCallback
 
 from . import WizConfigEntry
-from .const import DOMAIN, SIGNAL_WIZ_PIR
-from .entity import WizEntity
-from .models import WizData
+from const import DOMAIN, SIGNAL_WIZ_PIR
+from entity import WizEntity
+from models import WizData
 
 OCCUPANCY_UNIQUE_ID = "{}_occupancy"
 

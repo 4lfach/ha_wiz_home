@@ -1,7 +1,7 @@
 {
-  "domain": "wiz_alfa",
-  "name": "WiZ alfa",
-  "codeowners": ["@4lfach"],
+  "domain": "wiz",
+  "name": "WiZ",
+  "codeowners": ["@sbidy, @4lfach"],
   "config_flow": true,
   "dependencies": ["network"],
   "dhcp": [
@@ -21,7 +21,7 @@
       "macaddress": "6C2990*"
     },
     {
-      "hostname": "wiz_alfa_*"
+      "hostname": "wiz_"
     }
   ],
   "documentation": "https://www.home-assistant.io/integrations/wiz",

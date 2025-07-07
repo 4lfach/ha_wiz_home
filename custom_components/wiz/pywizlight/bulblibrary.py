@@ -17,7 +17,7 @@ import logging
 from enum import Enum
 from typing import List, Optional
 
-from pywizlight.exceptions import WizLightNotKnownBulb
+from exceptions import WizLightNotKnownBulb
 
 _LOGGER = logging.getLogger(__name__)
 

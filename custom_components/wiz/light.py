@@ -4,9 +4,9 @@ from __future__ import annotations
 import logging
 from typing import Any
 
-from pywizlight.bulb import PilotBuilder
-from pywizlight.bulblibrary import BulbClass, BulbType, Features
-from pywizlight.scenes import get_id_from_scene_name
+from .pywizlight.bulb import PilotBuilder
+from .pywizlight.bulblibrary import BulbClass, BulbType, Features
+from .pywizlight.scenes import get_id_from_scene_name
 
 from homeassistant.components.light import (
     ATTR_BRIGHTNESS,
@@ -21,10 +21,11 @@ from homeassistant.components.light import (
 )
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.entity_platform import AddConfigEntryEntitiesCallback
-from . import CustomEffectManager, WizConfigEntry
-from .const import WIZ_EXCEPTIONS
-from .entity import WizToggleEntity
-from .models import WizData
+from . import WizConfigEntry
+from custom_effect import CustomEffectManager
+from const import WIZ_EXCEPTIONS
+from entity import WizToggleEntity
+from models import WizData
 
 RGB_WHITE_CHANNELS_COLOR_MODE = {1: ColorMode.RGBW, 2: ColorMode.RGBWW}
 

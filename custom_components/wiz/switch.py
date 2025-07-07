@@ -4,16 +4,16 @@ from __future__ import annotations
 
 from typing import Any
 
-from pywizlight.bulb import PilotBuilder
-from pywizlight.bulblibrary import BulbClass
+from .pywizlight.bulb import PilotBuilder
+from .pywizlight.bulblibrary import BulbClass
 
 from homeassistant.components.switch import SwitchEntity
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddConfigEntryEntitiesCallback
 
 from . import WizConfigEntry
-from .entity import WizToggleEntity
-from .models import WizData
+from entity import WizToggleEntity
+from models import WizData
 
 
 async def async_setup_entry(
