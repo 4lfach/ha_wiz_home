@@ -6,7 +6,7 @@ from collections.abc import Callable, Coroutine
 from dataclasses import dataclass
 from typing import cast
 
-from pywizlight_alfa import wizlight
+from .pywizlight_alfa.bulb import wizlight
 
 from homeassistant.components.number import (
     NumberEntity,

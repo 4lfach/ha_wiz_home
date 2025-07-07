@@ -4,9 +4,9 @@ from __future__ import annotations
 import logging
 from typing import Any
 
-from pywizlight_alfa import PilotBuilder
-from pywizlight_alfa import BulbClass, BulbType, Features
-from pywizlight_alfa import get_id_from_scene_name
+from .pywizlight_alfa.bulb import PilotBuilder
+from .pywizlight_alfa.bulblibrary import BulbClass, BulbType, Features
+from .pywizlight_alfa.scenes import get_id_from_scene_name
 
 from homeassistant.components.light import (
     ATTR_BRIGHTNESS,
