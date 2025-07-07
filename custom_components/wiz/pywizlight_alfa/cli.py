@@ -5,9 +5,9 @@ from typing import Any, Callable, Coroutine, TypeVar
 
 import click
 
-from pywizlight_alfa.bulb import PilotBuilder, wizlight
-from pywizlight_alfa.discovery import find_wizlights
-from pywizlight_alfa.home import wizhome
+from .bulb import PilotBuilder, wizlight
+from .discovery import find_wizlights
+from .home import wizhome
 
 T = TypeVar("T")
 

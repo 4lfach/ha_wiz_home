@@ -6,11 +6,11 @@ from unittest.mock import patch
 import pytest
 
 from pywizlight_alfa import SCENES, PilotBuilder, wizlight
-from pywizlight_alfa.bulb import states_match
-from pywizlight_alfa.bulblibrary import BulbClass, BulbType, Features, KelvinRange
-from pywizlight_alfa.discovery import discover_lights
-from pywizlight_alfa.exceptions import WizLightConnectionError
-from pywizlight_alfa.tests.fake_bulb import startup_bulb
+from .bulb import states_match
+from .bulblibrary import BulbClass, BulbType, Features, KelvinRange
+from .discovery import discover_lights
+from .exceptions import WizLightConnectionError
+from .tests.fake_bulb import startup_bulb
 
 
 @pytest.fixture()

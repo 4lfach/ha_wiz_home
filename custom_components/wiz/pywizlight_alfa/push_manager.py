@@ -5,9 +5,9 @@ import json
 import logging
 from typing import Callable, Dict, Optional, Tuple, cast
 
-from pywizlight_alfa.models import DiscoveredBulb
-from pywizlight_alfa.protocol import WizProtocol
-from pywizlight_alfa.utils import create_udp_socket, generate_mac, get_source_ip
+from .models import DiscoveredBulb
+from .protocol import WizProtocol
+from .utils import create_udp_socket, generate_mac, get_source_ip
 
 _LOGGER = logging.getLogger(__name__)
 

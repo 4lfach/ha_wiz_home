@@ -8,13 +8,13 @@ from unittest.mock import patch
 import pytest
 
 from pywizlight_alfa import wizlight
-from pywizlight_alfa.bulb import PilotParser
-from pywizlight_alfa.bulblibrary import BulbClass, BulbType, Features, KelvinRange
-from pywizlight_alfa.models import DiscoveredBulb
-from pywizlight_alfa.protocol import WizProtocol
-from pywizlight_alfa.push_manager import PushManager
-from pywizlight_alfa.tests.fake_bulb import startup_bulb
-from pywizlight_alfa.utils import to_wiz_json
+from .bulb import PilotParser
+from .bulblibrary import BulbClass, BulbType, Features, KelvinRange
+from .models import DiscoveredBulb
+from .protocol import WizProtocol
+from .push_manager import PushManager
+from .tests.fake_bulb import startup_bulb
+from .utils import to_wiz_json
 
 logging.getLogger("pywizlight").setLevel(logging.DEBUG)
 

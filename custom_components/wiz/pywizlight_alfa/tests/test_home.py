@@ -3,8 +3,8 @@ from typing import AsyncGenerator
 from unittest.mock import patch
 import asyncio
 import pytest
-from pywizlight_alfa.home import wizhome
-from pywizlight_alfa.exceptions import (
+from .home import wizhome
+from .exceptions import (
     WizLightError,
 )
 import logging

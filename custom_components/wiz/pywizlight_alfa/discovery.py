@@ -6,9 +6,9 @@ import logging
 from asyncio import AbstractEventLoop, BaseTransport, DatagramTransport, Future
 from typing import Any, List, Optional, Tuple, cast
 
-from pywizlight_alfa.bulb import wizlight
-from pywizlight_alfa.models import BulbRegistry, DiscoveredBulb
-from pywizlight_alfa.utils import create_udp_broadcast_socket
+from .bulb import wizlight
+from .models import BulbRegistry, DiscoveredBulb
+from .utils import create_udp_broadcast_socket
 
 _LOGGER = logging.getLogger(__name__)
 

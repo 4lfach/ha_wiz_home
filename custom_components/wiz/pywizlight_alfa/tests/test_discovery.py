@@ -8,7 +8,7 @@ from unittest.mock import MagicMock, patch
 
 import pytest
 
-from pywizlight_alfa.discovery import (
+from .discovery import (
     BroadcastProtocol,
     DiscoveredBulb,
     discover_lights,

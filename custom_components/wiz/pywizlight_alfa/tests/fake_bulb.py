@@ -4,7 +4,7 @@ import asyncio
 import json
 from typing import Any, Callable, Dict, Tuple, cast
 
-from pywizlight_alfa.protocol import WizProtocol
+from .protocol import WizProtocol
 
 MODULE_CONFIGS = {  # AKA getModelConfig
     ("ESP01_SHRGB_03", "1.25.0"): {

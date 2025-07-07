@@ -5,8 +5,8 @@ from typing import AsyncGenerator
 import pytest
 
 from pywizlight_alfa import wizlight
-from pywizlight_alfa.bulblibrary import BulbClass, BulbType, Features
-from pywizlight_alfa.tests.fake_bulb import startup_bulb
+from .bulblibrary import BulbClass, BulbType, Features
+from .tests.fake_bulb import startup_bulb
 
 
 @pytest.fixture()
