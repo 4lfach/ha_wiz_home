@@ -11,7 +11,7 @@ from pywizlight import (
     RenderingType,
 )
 
-from wiz.storage import WizHomeConfigStorage
+from .storage import WizHomeConfigStorage
 
 _LOGGER = logging.getLogger(__name__)
 _LOGGER.setLevel(logging.DEBUG)

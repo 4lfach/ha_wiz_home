@@ -8,8 +8,8 @@ from typing import Any
 
 from pywizlight import PilotParser, wizlight
 
-from wiz.custom_effect import CustomEffectManager
-from wiz.storage import WizHomeConfigStorage
+from .custom_effect import CustomEffectManager
+from .storage import WizHomeConfigStorage
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import CONF_HOST, EVENT_HOMEASSISTANT_STOP, Platform
 from homeassistant.core import Event, HomeAssistant, ServiceCall, callback
@@ -21,7 +21,7 @@ from homeassistant.helpers.event import async_track_time_interval
 from homeassistant.helpers.typing import ConfigType
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator, UpdateFailed
 
-from wiz.const import (
+from .const import (
     DISCOVER_SCAN_TIMEOUT,
     DISCOVERY_INTERVAL,
     DOMAIN,
@@ -31,8 +31,8 @@ from wiz.const import (
     WIZ_HOME_CONFIG,
     WIZ_HOME_LINK,
 )
-from wiz.discovery import async_discover_devices, async_trigger_discovery
-from wiz.models import WizData
+from .discovery import async_discover_devices, async_trigger_discovery
+from .models import WizData
 
 type WizConfigEntry = ConfigEntry[WizData]
 

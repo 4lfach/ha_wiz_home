@@ -17,9 +17,9 @@ from homeassistant.const import EntityCategory
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.entity_platform import AddConfigEntryEntitiesCallback
 
-from wiz import WizConfigEntry
-from wiz.entity import WizEntity
-from wiz.models import WizData
+from . import WizConfigEntry
+from .entity import WizEntity
+from .models import WizData
 
 
 @dataclass(frozen=True, kw_only=True)

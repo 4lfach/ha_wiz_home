@@ -16,7 +16,7 @@ from homeassistant.helpers.update_coordinator import (
     DataUpdateCoordinator,
 )
 
-from wiz.models import WizData
+from .models import WizData
 
 
 class WizEntity(CoordinatorEntity[DataUpdateCoordinator[float | None]], Entity):

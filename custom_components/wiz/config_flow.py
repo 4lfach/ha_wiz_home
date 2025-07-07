@@ -19,8 +19,8 @@ from homeassistant.helpers.service_info.dhcp import DhcpServiceInfo
 from homeassistant.helpers.storage import Store
 from homeassistant.util.network import is_ip_address
 
-from wiz.const import DOMAIN, STORAGE_VERSION, WIZ_HOME_LINK
-from wiz.utils import build_full_bulb_name
+from .const import DOMAIN, STORAGE_VERSION, WIZ_HOME_LINK
+from .utils import build_full_bulb_name
 
 _LOGGER = logging.getLogger(__name__)
 
