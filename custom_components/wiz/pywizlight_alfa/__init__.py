@@ -2,15 +2,15 @@ from .bulb import PilotBuilder, PilotParser, wizlight, PIR_SOURCE
 
 from .effect_manager import EffectStep, EffectDetails, PreviewEffect, ModifierType, RenderingType
 
-from . import discovery
-from .discovery import find_wizlights, discover_lights
-from .models import DiscoveredBulb
-from .scenes import SCENES
-from .bulblibrary import BulbType, BulbClass, Features
+from pywizlight_alfa import discovery
+from pywizlight_alfa.discovery import find_wizlights, discover_lights
+from pywizlight_alfa.models import DiscoveredBulb
+from pywizlight_alfa.scenes import SCENES
+from pywizlight_alfa.bulblibrary import BulbType, BulbClass, Features
 
-from .exceptions import WizLightConnectionError, WizLightTimeOutError, WizLightNotKnownBulb
+from pywizlight_alfa.exceptions import WizLightConnectionError, WizLightTimeOutError, WizLightNotKnownBulb
 
-from .scenes import get_id_from_scene_name
+from pywizlight_alfa.scenes import get_id_from_scene_name
 
 __all__ = [
     "BulbType",
