@@ -6,7 +6,7 @@ from datetime import timedelta
 import logging
 from typing import Any
 
-from pywizlight import PilotParser, wizlight
+from pywizlight_alfa import PilotParser, wizlight
 
 from .custom_effect import CustomEffectManager
 from .storage import WizHomeConfigStorage
