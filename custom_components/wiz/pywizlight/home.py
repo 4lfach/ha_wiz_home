@@ -5,8 +5,7 @@ import logging
 import os
 import requests
 
-from _version import __version__ as pywizlight_version
-from exceptions import (
+from .exceptions import (
     WizHomeError,
     WizHomeParsingError,
 )

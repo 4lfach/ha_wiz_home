@@ -13,7 +13,7 @@ from homeassistant.components import network
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers import discovery_flow
 
-from const import DOMAIN
+from .const import DOMAIN
 
 _LOGGER = logging.getLogger(__name__)
 

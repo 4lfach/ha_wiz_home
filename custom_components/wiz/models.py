@@ -8,7 +8,7 @@ from .pywizlight.bulb import wizlight
 
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator
 
-from custom_effect import CustomEffectManager
+from .custom_effect import CustomEffectManager
 
 
 @dataclass
