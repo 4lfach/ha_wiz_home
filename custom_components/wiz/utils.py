@@ -12,7 +12,7 @@ from .pywizlight.bulblibrary import BulbType, BulbClass
 
 from homeassistant.core import HomeAssistant
 
-from const import DEFAULT_NAME
+from .const import DEFAULT_NAME
 
 _LOGGER = logging.getLogger("Alfach")
 _LOGGER.setLevel(logging.DEBUG)

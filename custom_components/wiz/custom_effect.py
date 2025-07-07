@@ -11,7 +11,7 @@ from .pywizlight.effect_manager import (
     RenderingType,
 )
 
-from storage import WizHomeConfigStorage
+from .storage import WizHomeConfigStorage
 
 _LOGGER = logging.getLogger(__name__)
 _LOGGER.setLevel(logging.DEBUG)

@@ -22,10 +22,10 @@ from homeassistant.components.light import (
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.entity_platform import AddConfigEntryEntitiesCallback
 from . import WizConfigEntry
-from custom_effect import CustomEffectManager
-from const import WIZ_EXCEPTIONS
-from entity import WizToggleEntity
-from models import WizData
+from .custom_effect import CustomEffectManager
+from .const import WIZ_EXCEPTIONS
+from .entity import WizToggleEntity
+from .models import WizData
 
 RGB_WHITE_CHANNELS_COLOR_MODE = {1: ColorMode.RGBW, 2: ColorMode.RGBWW}
 
