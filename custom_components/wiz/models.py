@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
-from pywizlight import wizlight
+from .pywizlight.bulb import wizlight
 
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator
 

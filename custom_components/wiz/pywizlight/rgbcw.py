@@ -4,7 +4,7 @@ import logging
 from math import atan2, cos, pi
 from typing import Iterable, Tuple
 
-from .vec import (
+from vec import (
     EPSILON,
     Vector,
     vecAdd,

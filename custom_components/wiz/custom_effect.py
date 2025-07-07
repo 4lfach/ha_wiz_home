@@ -3,7 +3,7 @@
 import logging
 from typing import Any
 
-from pywizlight.effect_manager import (
+from .pywizlight.effect_manager import (
     EffectDetails,
     EffectStep,
     ModifierType,
@@ -11,7 +11,7 @@ from pywizlight.effect_manager import (
     RenderingType,
 )
 
-from .storage import WizHomeConfigStorage
+from storage import WizHomeConfigStorage
 
 _LOGGER = logging.getLogger(__name__)
 _LOGGER.setLevel(logging.DEBUG)

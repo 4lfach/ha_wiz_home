@@ -5,8 +5,9 @@ from typing import Any, Callable, Coroutine, TypeVar
 
 import click
 
-from pywizlight import PilotBuilder, discovery, wizlight
-from pywizlight.home import wizhome
+from bulb import PilotBuilder, wizlight
+from discovery import find_wizlights
+from home import wizhome
 
 T = TypeVar("T")
 
@@ -52,7 +53,7 @@ async def discover(b: str) -> None:
 
     located_devices = {}
 
-    discovered_devices = await discovery.find_wizlights(broadcast_address=b)
+    discovered_devices = await find_wizlights(broadcast_address=b)
 
     for wh in homes:
         if wh.jsonHome:

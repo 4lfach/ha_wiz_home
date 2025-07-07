@@ -7,9 +7,9 @@ import logging
 from typing import Any
 
 import aiohttp
-from pywizlight import wizlight
-from pywizlight.discovery import DiscoveredBulb
-from pywizlight.exceptions import WizLightConnectionError, WizLightTimeOutError
+from .pywizlight import wizlight
+from .pywizlight.discovery import DiscoveredBulb
+from .pywizlight.exceptions import WizLightConnectionError, WizLightTimeOutError
 import voluptuous as vol
 
 from homeassistant.components import onboarding

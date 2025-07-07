@@ -1,13 +1,16 @@
 """WiZ Platform integration."""
 
-from __future__ import annotations
+from __future__ import annotations  # noqa: I001
 
 from datetime import timedelta
 import logging
 from typing import Any
 
-from pywizlight.bulb import PIR_SOURCE, PilotParser, wizlight
+from .pywizlight.bulb import PilotParser, wizlight
+from .pywizlight.bulb import PIR_SOURCE
 
+from custom_effect import CustomEffectManager
+from storage import WizHomeConfigStorage
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import CONF_HOST, EVENT_HOMEASSISTANT_STOP, Platform
 from homeassistant.core import Event, HomeAssistant, ServiceCall, callback
@@ -19,7 +22,7 @@ from homeassistant.helpers.event import async_track_time_interval
 from homeassistant.helpers.typing import ConfigType
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator, UpdateFailed
 
-from .const import (
+from const import (
     DISCOVER_SCAN_TIMEOUT,
     DISCOVERY_INTERVAL,
     DOMAIN,
@@ -29,10 +32,8 @@ from .const import (
     WIZ_HOME_CONFIG,
     WIZ_HOME_LINK,
 )
-from .custom_effect import CustomEffectManager
-from .discovery import async_discover_devices, async_trigger_discovery
-from .models import WizData
-from .storage import WizHomeConfigStorage
+from discovery import async_discover_devices, async_trigger_discovery
+from models import WizData
 
 type WizConfigEntry = ConfigEntry[WizData]
 
@@ -67,12 +68,12 @@ async def async_setup(hass: HomeAssistant, hass_config: ConfigType) -> bool:
     return True
 
 
-async def _async_update_listener(hass: HomeAssistant, entry: WizConfigEntry) -> None:
+async def _async_update_listener(hass: HomeAssistant, entry: ConfigEntry) -> None:
     """Handle options update."""
     await hass.config_entries.async_reload(entry.entry_id)
 
 
-async def async_setup_entry(hass: HomeAssistant, entry: WizConfigEntry) -> bool:
+async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     """Set up the wiz integration from a config entry."""
     # Initialize shared storage instance
     storage = WizHomeConfigStorage(hass, WIZ_HOME_CONFIG)
@@ -160,7 +161,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: WizConfigEntry) -> bool:
         coordinator=coordinator,
         bulb=bulb,
         scenes=scenes,
-        custom_effect_manager=custom_effect_manager,
+        custom_effect_manager=custom_effect_manager
     )
     await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
 
@@ -168,7 +169,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: WizConfigEntry) -> bool:
     return True
 
 
-async def async_unload_entry(hass: HomeAssistant, entry: WizConfigEntry) -> bool:
+async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     """Unload a config entry."""
     if unload_ok := await hass.config_entries.async_unload_platforms(entry, PLATFORMS):
         await entry.runtime_data.bulb.async_close()

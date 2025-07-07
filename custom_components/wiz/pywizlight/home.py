@@ -2,12 +2,11 @@
 import asyncio
 import json
 import logging
-import time, os
+import os
 import requests
-from typing import Any, Callable, Dict, List, Optional, Tuple, Union, cast
 
-from pywizlight._version import __version__ as pywizlight_version
-from pywizlight.exceptions import (
+from _version import __version__ as pywizlight_version
+from exceptions import (
     WizHomeError,
     WizHomeParsingError,
 )
