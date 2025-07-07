@@ -9,7 +9,7 @@ import aiohttp
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.storage import Store
 
-from .const import STORAGE_VERSION
+from wiz.const import STORAGE_VERSION
 
 _LOGGER = logging.getLogger(__name__)
 

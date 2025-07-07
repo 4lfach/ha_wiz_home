@@ -5,7 +5,7 @@ import logging
 import os
 import requests
 
-from .exceptions import (
+from pywizlight.exceptions import (
     WizHomeError,
     WizHomeParsingError,
 )

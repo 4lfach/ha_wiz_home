@@ -7,9 +7,9 @@ import logging
 from typing import Any
 
 import aiohttp
-from .pywizlight.bulb import wizlight
-from .pywizlight.discovery import DiscoveredBulb
-from .pywizlight.exceptions import WizLightConnectionError, WizLightTimeOutError
+from pywizlight import wizlight
+from pywizlight import DiscoveredBulb
+from pywizlight import WizLightConnectionError, WizLightTimeOutError
 import voluptuous as vol
 
 from homeassistant.components import onboarding
@@ -19,8 +19,8 @@ from homeassistant.helpers.service_info.dhcp import DhcpServiceInfo
 from homeassistant.helpers.storage import Store
 from homeassistant.util.network import is_ip_address
 
-from .const import DOMAIN, STORAGE_VERSION, WIZ_HOME_LINK
-from .utils import build_full_bulb_name
+from wiz.const import DOMAIN, STORAGE_VERSION, WIZ_HOME_LINK
+from wiz.utils import build_full_bulb_name
 
 _LOGGER = logging.getLogger(__name__)
 

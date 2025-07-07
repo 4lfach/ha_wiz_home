@@ -2,7 +2,7 @@
 
 from typing import Dict, Iterable, List, cast
 
-from .bulblibrary import BulbClass
+from pywizlight.bulblibrary import BulbClass
 
 # Ordered by name and not by ID
 SCENES = {

@@ -11,9 +11,9 @@ from homeassistant.components.switch import SwitchEntity
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddConfigEntryEntitiesCallback
 
-from . import WizConfigEntry
-from .entity import WizToggleEntity
-from .models import WizData
+from wiz import WizConfigEntry
+from wiz.entity import WizToggleEntity
+from wiz.models import WizData
 
 
 async def async_setup_entry(

@@ -5,7 +5,7 @@ from __future__ import annotations
 from abc import abstractmethod
 from typing import Any
 
-from .pywizlight.bulblibrary import BulbType
+from pywizlight import BulbType
 
 from homeassistant.const import ATTR_HW_VERSION, ATTR_MODEL
 from homeassistant.core import callback
@@ -16,7 +16,7 @@ from homeassistant.helpers.update_coordinator import (
     DataUpdateCoordinator,
 )
 
-from .models import WizData
+from wiz.models import WizData
 
 
 class WizEntity(CoordinatorEntity[DataUpdateCoordinator[float | None]], Entity):

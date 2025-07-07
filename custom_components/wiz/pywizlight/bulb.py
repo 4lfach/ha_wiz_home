@@ -7,21 +7,21 @@ import logging
 import time
 from typing import Any, Callable, Dict, List, Optional, Tuple, Union, cast
 
-from ._version import __version__ as pywizlight_version
-from .bulblibrary import BulbType
-from .effect_manager import PreviewEffect
-from .exceptions import (
+from pywizlight._version import __version__ as pywizlight_version
+from pywizlight.bulblibrary import BulbType
+from pywizlight.effect_manager import PreviewEffect
+from pywizlight.exceptions import (
     WizLightConnectionError,
     WizLightMethodNotFound,
     WizLightTimeOutError,
 )
-from .models import DiscoveredBulb
-from .protocol import WizProtocol
-from .push_manager import PushManager
-from .rgbcw import hs2rgbcw, rgb2rgbcw
-from .scenes import SCENES, SCENES_BY_CLASS
-from .utils import hex_to_percent, percent_to_hex, to_wiz_json
-from .vec import Vector
+from pywizlight.models import DiscoveredBulb
+from pywizlight.protocol import WizProtocol
+from pywizlight.push_manager import PushManager
+from pywizlight.rgbcw import hs2rgbcw, rgb2rgbcw
+from pywizlight.scenes import SCENES, SCENES_BY_CLASS
+from pywizlight.utils import hex_to_percent, percent_to_hex, to_wiz_json
+from pywizlight.vec import Vector
 
 _LOGGER = logging.getLogger(__name__)
 

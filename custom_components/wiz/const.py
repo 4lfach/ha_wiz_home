@@ -2,7 +2,7 @@
 
 from datetime import timedelta
 
-from .pywizlight.exceptions import (
+from pywizlight import (
     WizLightConnectionError,
     WizLightNotKnownBulb,
     WizLightTimeOutError,

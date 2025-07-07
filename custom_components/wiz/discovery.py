@@ -6,14 +6,15 @@ import asyncio
 from dataclasses import asdict
 import logging
 
-from .pywizlight.discovery import DiscoveredBulb, find_wizlights
+from pywizlight import find_wizlights
+from pywizlight import DiscoveredBulb
 
 from homeassistant import config_entries
 from homeassistant.components import network
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers import discovery_flow
 
-from .const import DOMAIN
+from wiz.const import DOMAIN
 
 _LOGGER = logging.getLogger(__name__)
 

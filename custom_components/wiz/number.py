@@ -6,7 +6,7 @@ from collections.abc import Callable, Coroutine
 from dataclasses import dataclass
 from typing import cast
 
-from .pywizlight.bulb import wizlight
+from pywizlight import wizlight
 
 from homeassistant.components.number import (
     NumberEntity,
@@ -17,9 +17,9 @@ from homeassistant.const import EntityCategory
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.entity_platform import AddConfigEntryEntitiesCallback
 
-from . import WizConfigEntry
-from .entity import WizEntity
-from .models import WizData
+from wiz import WizConfigEntry
+from wiz.entity import WizEntity
+from wiz.models import WizData
 
 
 @dataclass(frozen=True, kw_only=True)
