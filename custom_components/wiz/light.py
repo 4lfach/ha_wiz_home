@@ -1,12 +1,13 @@
 """WiZ integration light platform."""
 
 from __future__ import annotations
+
 import logging
 from typing import Any
 
-from .pywizlight_alfa.bulb import PilotBuilder
-from .pywizlight_alfa.bulblibrary import BulbClass, BulbType, Features
-from .pywizlight_alfa.scenes import get_id_from_scene_name
+from pywizlight import PilotBuilder
+from pywizlight.bulblibrary import BulbClass, BulbType, Features
+from pywizlight.scenes import get_id_from_scene_name
 
 from homeassistant.components.light import (
     ATTR_BRIGHTNESS,
@@ -22,8 +23,7 @@ from homeassistant.components.light import (
 from homeassistant.core import HomeAssistant, callback
 from homeassistant.helpers.entity_platform import AddConfigEntryEntitiesCallback
 
-from . import WizConfigEntry
-from .custom_effect import CustomEffectManager
+from . import CustomEffectManager, WizConfigEntry
 from .const import WIZ_EXCEPTIONS
 from .entity import WizToggleEntity
 from .models import WizData
@@ -34,7 +34,9 @@ _LOGGER = logging.getLogger(__name__)
 _LOGGER.setLevel(logging.DEBUG)
 
 
-def _async_pilot_builder(custom_effect_manager: CustomEffectManager, **kwargs: Any) -> PilotBuilder:
+def _async_pilot_builder(
+    custom_effect_manager: CustomEffectManager, **kwargs: Any
+) -> PilotBuilder:
     """Create the PilotBuilder for turn on."""
     brightness = kwargs.get(ATTR_BRIGHTNESS)
 
@@ -54,7 +56,10 @@ def _async_pilot_builder(custom_effect_manager: CustomEffectManager, **kwargs: A
         effect_name = kwargs[ATTR_EFFECT]
 
         # Check if it's a custom effect
-        if custom_effect_manager and effect_name in custom_effect_manager.get_effect_names():
+        if (
+            custom_effect_manager
+            and effect_name in custom_effect_manager.get_effect_names()
+        ):
             # For custom effects, return None to indicate special handling is needed
             return None
 
@@ -134,33 +139,60 @@ class WizBulbEntity(WizToggleEntity, LightEntity):
 
     async def async_turn_on(self, **kwargs: Any) -> None:
         """Instruct the light to turn on."""
-        custom_effect_manager = self._wiz_data.custom_effect_manager
+        custom_effect_manager = None
+        fw_version = self._device.bulbtype.fw_version
+
+        if fw_version >= "1.34.204":
+            custom_effect_manager = self._wiz_data.custom_effect_manager
+        else:
+            _LOGGER.warning(
+                "Custom effects are not supported on firmware versions below 1.34.204"
+            )
+
         pilot_builder = _async_pilot_builder(custom_effect_manager, **kwargs)
 
-        if pilot_builder is None and ATTR_EFFECT in kwargs:
-            # Handle custom effect
-            effect_name = kwargs[ATTR_EFFECT]
-            if custom_effect_manager and effect_name in custom_effect_manager.get_effect_names():
-                effect_names = custom_effect_manager.get_effect_names()
-                custom_effects = custom_effect_manager.get_preview_effects()
-                effect_index = effect_names.index(effect_name)
-                preview_effect = custom_effects[effect_index]
-
-                try:
-                    await self._device.set_preview(preview_effect)
-                    _LOGGER.debug("Successfully set custom effect: %s", effect_name)
-                except WIZ_EXCEPTIONS as ex:
-                    _LOGGER.error("Failed to set custom effect %s: %s", effect_name, ex)
-                    # Fall back to regular turn on without effect
-                    pilot_builder = PilotBuilder(brightness=kwargs.get(ATTR_BRIGHTNESS))
-            else:
-                # Unknown effect, fall back to regular turn on
-                pilot_builder = PilotBuilder(brightness=kwargs.get(ATTR_BRIGHTNESS))
-
-        if pilot_builder:
+        # Handle custom effects when pilot_builder is None
+        if (
+            pilot_builder is None
+            and custom_effect_manager is not None
+            and ATTR_EFFECT in kwargs
+        ):
+            await self._async_handle_custom_effect(kwargs[ATTR_EFFECT], kwargs)
+        elif pilot_builder:
             await self._device.turn_on(pilot_builder)
 
         await self.coordinator.async_request_refresh()
+
+    async def _async_handle_custom_effect(
+        self, effect_name: str, kwargs: dict[str, Any]
+    ) -> None:
+        """Handle custom effect application."""
+        custom_effect_manager = self._wiz_data.custom_effect_manager
+
+        if (
+            not custom_effect_manager
+            or effect_name not in custom_effect_manager.get_effect_names()
+        ):
+            # Unknown effect, fall back to regular turn on
+            await self._device.turn_on(
+                PilotBuilder(brightness=kwargs.get(ATTR_BRIGHTNESS))
+            )
+            return
+
+        try:
+            effect_names = custom_effect_manager.get_effect_names()
+            custom_effects = custom_effect_manager.get_preview_effects()
+            effect_index = effect_names.index(effect_name)
+            preview_effect = custom_effects[effect_index]
+
+            await self._device.set_preview(preview_effect)
+            _LOGGER.debug("Successfully set custom effect: %s", effect_name)
+        except WIZ_EXCEPTIONS as ex:
+            _LOGGER.error("Failed to set custom effect %s: %s", effect_name, ex)
+            # Fall back to regular turn on without effect
+            await self._device.turn_on(
+                PilotBuilder(brightness=kwargs.get(ATTR_BRIGHTNESS))
+            )
 
     @property
     def _wiz_data(self) -> WizData:

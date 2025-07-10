@@ -4,8 +4,8 @@ from __future__ import annotations
 
 from typing import Any
 
-from .pywizlight_alfa.bulb import PilotBuilder
-from .pywizlight_alfa.bulblibrary import BulbClass
+from pywizlight import PilotBuilder
+from pywizlight.bulblibrary import BulbClass
 
 from homeassistant.components.switch import SwitchEntity
 from homeassistant.core import HomeAssistant

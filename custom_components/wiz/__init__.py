@@ -1,20 +1,18 @@
 """WiZ Platform integration."""
 
-from __future__ import annotations  # noqa: I001
+from __future__ import annotations
 
 from datetime import timedelta
 import logging
 from typing import Any
 
-from .pywizlight_alfa.bulb import PilotParser, wizlight
+from pywizlight.bulb import PIR_SOURCE, PilotParser, wizlight
 
-from .custom_effect import CustomEffectManager
-from .storage import WizHomeConfigStorage
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import CONF_HOST, EVENT_HOMEASSISTANT_STOP, Platform
-from homeassistant.core import Event, HomeAssistant, ServiceCall, callback
-from homeassistant.exceptions import ConfigEntryNotReady, ServiceValidationError
-from homeassistant.helpers import config_validation as cv, entity_registry as er
+from homeassistant.core import Event, HomeAssistant, callback
+from homeassistant.exceptions import ConfigEntryNotReady
+from homeassistant.helpers import config_validation as cv
 from homeassistant.helpers.debounce import Debouncer
 from homeassistant.helpers.dispatcher import async_dispatcher_send
 from homeassistant.helpers.event import async_track_time_interval
@@ -33,6 +31,9 @@ from .const import (
 )
 from .discovery import async_discover_devices, async_trigger_discovery
 from .models import WizData
+from .utils.custom_effect import CustomEffectManager
+from .utils.storage import WizHomeConfigStorage
+from .utils.utils import build_full_bulb_name
 
 type WizConfigEntry = ConfigEntry[WizData]
 
@@ -67,12 +68,12 @@ async def async_setup(hass: HomeAssistant, hass_config: ConfigType) -> bool:
     return True
 
 
-async def _async_update_listener(hass: HomeAssistant, entry: ConfigEntry) -> None:
+async def _async_update_listener(hass: HomeAssistant, entry: WizConfigEntry) -> None:
     """Handle options update."""
     await hass.config_entries.async_reload(entry.entry_id)
 
 
-async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
+async def async_setup_entry(hass: HomeAssistant, entry: WizConfigEntry) -> bool:
     """Set up the wiz integration from a config entry."""
     # Initialize shared storage instance
     storage = WizHomeConfigStorage(hass, WIZ_HOME_CONFIG)
@@ -87,12 +88,17 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     _LOGGER.debug("Using WiZ app link: %s", wiz_app_link)
     bulb = wizlight(ip_address)
     try:
-        scenes = await bulb.getSupportedScenes()
-        # Initialize custom effect manager
-        custom_effect_manager = CustomEffectManager(storage)
-        await custom_effect_manager.async_load_effects()
-        custom_scene_names = custom_effect_manager.get_effect_names()
-        scenes.extend(custom_scene_names)
+        base_scenes = await bulb.getSupportedScenes()
+        # Make a copy to avoid modifying the original scenes list
+        scenes = base_scenes.copy()
+        # Initialize custom effect manager for fw_version > 1.34.204
+        custom_effect_manager = None
+        fw_version = bulb.bulbtype.fw_version
+        if fw_version >= "1.34.204":
+            custom_effect_manager = CustomEffectManager(storage)
+            await custom_effect_manager.async_load_effects()
+            custom_scene_names = custom_effect_manager.get_effect_names()
+            scenes.extend(custom_scene_names)
         await bulb.getMac()
     except WIZ_CONNECT_EXCEPTIONS as err:
         await bulb.async_close()
@@ -117,6 +123,12 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
         except WIZ_EXCEPTIONS as ex:
             raise UpdateFailed(f"Failed to update device at {ip_address}: {ex}") from ex
         return None
+
+    # Update entry title if we have WiZ home config and title needs updating
+    if storage.async_has_stored_config():
+        new_title = await build_full_bulb_name(hass, bulb.bulbtype, bulb.mac)
+        if entry.title != new_title:
+            hass.config_entries.async_update_entry(entry, title=new_title)
 
     coordinator = DataUpdateCoordinator(
         hass=hass,
@@ -160,7 +172,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
         coordinator=coordinator,
         bulb=bulb,
         scenes=scenes,
-        custom_effect_manager=custom_effect_manager
+        custom_effect_manager=custom_effect_manager,
     )
     await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
 
@@ -168,7 +180,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     return True
 
 
-async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
+async def async_unload_entry(hass: HomeAssistant, entry: WizConfigEntry) -> bool:
     """Unload a config entry."""
     if unload_ok := await hass.config_entries.async_unload_platforms(entry, PLATFORMS):
         await entry.runtime_data.bulb.async_close()

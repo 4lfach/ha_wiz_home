@@ -6,8 +6,7 @@ import asyncio
 from dataclasses import asdict
 import logging
 
-from .pywizlight_alfa.discovery import find_wizlights
-from .pywizlight_alfa.discovery import DiscoveredBulb
+from pywizlight.discovery import DiscoveredBulb, find_wizlights
 
 from homeassistant import config_entries
 from homeassistant.components import network

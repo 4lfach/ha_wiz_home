@@ -2,14 +2,14 @@
 
 from datetime import timedelta
 
-from .pywizlight_alfa.exceptions import (
+from pywizlight.exceptions import (
     WizLightConnectionError,
     WizLightNotKnownBulb,
     WizLightTimeOutError,
 )
 
-DOMAIN = "wiz_alfa"
-DEFAULT_NAME = "WiZ alfa"
+DOMAIN = "wiz"
+DEFAULT_NAME = "WiZ"
 
 DISCOVER_SCAN_TIMEOUT = 10
 DISCOVERY_INTERVAL = timedelta(minutes=15)

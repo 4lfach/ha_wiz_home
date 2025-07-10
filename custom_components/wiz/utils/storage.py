@@ -9,7 +9,7 @@ import aiohttp
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.storage import Store
 
-from .const import STORAGE_VERSION
+from ..const import STORAGE_VERSION, WIZ_HOME_CONFIG
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -17,7 +17,7 @@ _LOGGER = logging.getLogger(__name__)
 class WizHomeConfigStorage:
     """Manager for WiZ home configuration storage."""
 
-    def __init__(self, hass: HomeAssistant, filename: str) -> None:
+    def __init__(self, hass: HomeAssistant, filename: str = WIZ_HOME_CONFIG) -> None:
         """Initialize the storage manager."""
         self.hass = hass
         self._store: Store = Store(hass, STORAGE_VERSION, filename)
@@ -39,11 +39,13 @@ class WizHomeConfigStorage:
                     return False
                 content = await response.text()
 
-            await self._store.async_save({
-                "url": url,
-                "config": json.loads(content),
-                "downloaded_at": self.hass.loop.time(),
-            })
+            await self._store.async_save(
+                {
+                    "url": url,
+                    "config": json.loads(content),
+                    "downloaded_at": self.hass.loop.time(),
+                }
+            )
         except (aiohttp.ClientError, json.JSONDecodeError, OSError) as ex:
             _LOGGER.error("Error processing WiZ home config: %s", ex)
             return False

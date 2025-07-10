@@ -121,15 +121,7 @@ class WiZHome:
 
     @staticmethod
     async def fetch_json(url: str) -> dict[Any, Any]:
-        """Asynchronously fetch JSON data from a URL.
-
-        Args:
-            url (str): The URL to fetch the JSON data from.
-
-        Returns:
-            dict: Parsed JSON data.
-
-        """
+        """Asynchronously fetch JSON data from a URL."""
         async with aiohttp.ClientSession() as session:
             resp = await session.get(url)
             resp.raise_for_status()

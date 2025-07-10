@@ -3,7 +3,7 @@
 import logging
 from typing import Any
 
-from .pywizlight_alfa.effect_manager import (
+from pywizlight.effect_manager import (
     EffectDetails,
     EffectStep,
     ModifierType,
@@ -42,12 +42,12 @@ class CustomEffectManager:
 
     def _load_effects_from_data(self, home_data: dict[str, Any]) -> None:
         """Load custom effects from home structure data."""
-        custom_effects_data = home_data.get('custom_effects', [])
+        custom_effects_data = home_data.get("custom_effects", [])
 
         for effect_data in custom_effects_data:
             try:
-                name = effect_data.get('name', '')
-                if not name or not effect_data.get('state', True):
+                name = effect_data.get("name", "")
+                if not name or not effect_data.get("state", True):
                     continue
 
                 preview_effect = self._create_preview_effect(effect_data)
@@ -56,22 +56,26 @@ class CustomEffectManager:
                 self._effect_names.append(name)
 
             except (KeyError, ValueError, TypeError) as ex:
-                _LOGGER.error("Error parsing effect %s: %s", effect_data.get('name', 'unknown'), ex)
+                _LOGGER.error(
+                    "Error parsing effect %s: %s",
+                    effect_data.get("name", "unknown"),
+                    ex,
+                )
 
     def _create_preview_effect(self, effect_data: dict[str, Any]) -> PreviewEffect:
         """Create PreviewEffect from effect data."""
-        elm_data = effect_data.get('elm', {})
+        elm_data = effect_data.get("elm", {})
 
         details = EffectDetails(
-            modifier=ModifierType(elm_data.get('modifier', 0)),
-            gradient=elm_data.get('gradient', True),
-            init_step=elm_data.get('initStep', 0),
-            rand=elm_data.get('rand', 0),
-            duration=effect_data.get('duration', 10)
+            modifier=ModifierType(elm_data.get("modifier", 0)),
+            gradient=elm_data.get("gradient", True),
+            init_step=elm_data.get("initStep", 0),
+            rand=elm_data.get("rand", 0),
+            duration=effect_data.get("duration", 10),
         )
 
         steps = []
-        raw_steps = elm_data.get('steps', [])
+        raw_steps = elm_data.get("steps", [])
 
         for step_data in raw_steps:
             if isinstance(step_data, list) and len(step_data) >= 13:
@@ -88,7 +92,7 @@ class CustomEffectManager:
                     transition=step_data[9],
                     rand=step_data[10],
                     advanced=step_data[11],
-                    software_head=step_data[12]
+                    software_head=step_data[12],
                 )
                 steps.append(step)
 

@@ -2,17 +2,14 @@
 
 from __future__ import annotations
 
-import json
 import logging
-import os
-from typing import Any
 
-import aiofiles
-from .pywizlight_alfa.bulblibrary import BulbType, BulbClass
+from pywizlight.bulblibrary import BulbClass, BulbType
 
 from homeassistant.core import HomeAssistant
 
-from .const import DEFAULT_NAME
+from ..const import DEFAULT_NAME
+from .storage import WizHomeConfigStorage
 
 _LOGGER = logging.getLogger("Alfach")
 _LOGGER.setLevel(logging.DEBUG)
@@ -74,7 +71,7 @@ async def get_device_and_room_name_by_mac(
     """
     try:
         # Try to find any stored WiZ home config
-        wiz_config = await _load_wiz_home_config(hass)
+        wiz_config = await WizHomeConfigStorage(hass).async_load_config()
         if not wiz_config:
             _LOGGER.debug("No WiZ home config found")
             return None, None
@@ -101,40 +98,6 @@ async def get_device_and_room_name_by_mac(
     except Exception as ex:
         _LOGGER.error("Error fetching device info from WiZ config: %s", ex)
         return None, None
-
-
-async def _load_wiz_home_config(hass: HomeAssistant) -> dict[Any, Any] | None:
-    """Load WiZ home config from storage. Returns the first found config."""
-    try:
-        # Get all storage files to find WiZ configs
-        storage_path = hass.config.path(".storage")
-
-        if not os.path.exists(storage_path):
-            return None
-
-        # Look for any wiz_home_config files
-        for filename in os.listdir(storage_path):
-            if filename.startswith(f"{STORAGE_KEY}"):
-                file_path = os.path.join(storage_path, filename)
-                try:
-                    async with aiofiles.open(file_path) as f:
-                        content = await f.read()
-                        storage_data: dict[Any, Any] = json.loads(content)
-                        config_data = storage_data.get("data", {}).get("config")
-                        if isinstance(config_data, dict):
-                            _LOGGER.debug("Loaded WiZ config from %s", filename)
-                            return config_data
-                except (json.JSONDecodeError, KeyError) as ex:
-                    _LOGGER.warning(
-                        "Failed to load WiZ config from %s: %s", filename, ex
-                    )
-                    continue
-
-        return None
-
-    except Exception as ex:
-        _LOGGER.error("Error loading WiZ home config: %s", ex)
-        return None
 
 
 def _find_device_by_mac(config: dict, mac_address: str) -> dict | None:
