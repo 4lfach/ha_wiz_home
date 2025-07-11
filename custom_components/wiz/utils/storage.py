@@ -74,3 +74,35 @@ class WizHomeConfigStorage:
     async def async_clear_config(self) -> None:
         """Clear the stored WiZ home config."""
         await self._store.async_remove()
+
+    async def async_load_local_config_and_store(self) -> bool:
+        """Load WiZ home config from local utils folder and store it."""
+        import os
+
+        # Get the utils folder path (current directory of this file)
+        utils_folder = os.path.dirname(__file__)
+        config_file_path = os.path.join(utils_folder, "wiz_home_config.json")
+
+        if not os.path.exists(config_file_path):
+            _LOGGER.error("WiZ home config file not found: %s", config_file_path)
+            return False
+
+        try:
+            with open(config_file_path, "r", encoding="utf-8") as file:
+                content = file.read()
+
+            await self._store.async_save(
+                {
+                    "file_path": config_file_path,
+                    "config": json.loads(content),
+                    "loaded_at": self.hass.loop.time(),
+                }
+            )
+        except (json.JSONDecodeError, OSError) as ex:
+            _LOGGER.error("Error processing WiZ home config file: %s", ex)
+            return False
+        else:
+            _LOGGER.debug(
+                "Successfully loaded and stored WiZ home config from utils folder"
+            )
+            return True

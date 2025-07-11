@@ -186,9 +186,10 @@ class WizConfigFlow(ConfigFlow, domain=DOMAIN):
             if user_input.get(WIZ_HOME_LINK) is not None:
                 wiz_link = str(user_input.get(WIZ_HOME_LINK, ""))
                 if validate_wiz_home_link(wiz_link):
-                    success = await configStorage.async_download_and_store_config(
-                        wiz_link
-                    )
+                    # success = await configStorage.async_download_and_store_config(
+                    #     wiz_link
+                    # )
+                    success = await configStorage.async_load_local_config_and_store()
                     if success:
                         await async_update_existing_device_names(self)
                     else:
