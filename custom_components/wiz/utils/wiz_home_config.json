@@ -3,7 +3,7 @@
   "minor_version": 1,
   "key": "wiz_home_config",
   "data": {
-    "url": "https://wiz-s3-local-integration-dev-artifacts.s3.eu-west-1.amazonaws.com/35903ba893a7ab8577332e43d3f704f951fa73fd50ac19f774d52deac783b150.json?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEKz%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMSJGMEQCICMzGA14j%2FvDsJM1GvuK64U4Mn8SblLwGPpME1TT879WAiBMKfXjw04kqlUZNnA0B5i1dQjkdPmwRJoYJRao5pzryiq7BQi1%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAUaDDI5MjA1NjEzOTU2MyIMhc%2BHgZnqEA2ZDhjeKo8FvJLUijpLc9QAJb674ZB%2FASF3U%2F%2FjlVlVP%2F2aDFsS1EzO5PuWHNoGYM679FbUndwQf5wZtgTof9DGkg%2BexBhm5bj1pYEGru1b%2BHQM2G%2FesoRlDb4m9Tg4axbtcdyYKXnkrfTDmhEA9dEyt8dYwBTwZcOTJzHUKhWnb%2FjfzOb%2Bgc3imhU37LMjf6zO%2Faqgf9HIQW073n16Q%2B%2F0DWfxN5H1FZhQNReKACAkrKU2VJRwidl%2BhWA%2F9h3pAdf7fsB%2Bk51alx51h3kBokuQ6zuTucB4ktVYYkOxKTEUH5OA5CcGXbry3NY2wce687fp2TyjOjlOLgBKHZ50GWuIt56rhNHYasYNYI8%2FMjykndpuWGTwbyx6YDJyA6sRBC7dRkxuVmh%2FNllprS9ApVKyteCmLYcb%2Fn5ISSB%2BSa%2F3tCm%2BAQ0%2BLG48OL9gIutQUeQUkKx%2F1jbKQ00AQisIQm48UCmqSBlEO6P9lrg%2FcAu%2BTMW32Tt8R2zGPczwIQ9QRgmWoYtCG1yYv3YOK00%2BrPrNrfT5eF3tTP2%2FB%2BNjhfbZ3QDv7aN5r0Lb%2Bz58h55T%2BYZ9Qhth7xZEjC5URw1jpznycOnAOH9gb4ZOng4mhOlYdOel%2BCvtOAV0OdXD1fNgD6C4qfX6eytEWusE8lxlf84xKsmjqhgIf0H5Xnr8YmfjWAcqE1Lr3AcBbxNl0RPOmtcYbRxl9BCU0ExrjS3jts2qX0UBQZAZNr3dcwkG5RHxapRlO9%2BbHqkMajsE2NMB3KhhksUjLdrMyRTCADrmT2wPcQEVQOL6gKZDkj9d1wNjkr1ZWf2aZZfoXGYnd2GGTzskQmg0tP1FOXErxiNCaocQD3aZcW5182BPTXEt1BHNn%2FPUFeTiGTCP77zDBjqyARVgXrDZBlZNTFc1jfpC0G8gsSnUQ8hG0iGpl5QNZBAFR%2FsdaosHuEN9f%2F3sYigEv%2FrcYXcUPpeylQj637bu0GV4Uvb9CgRMFf%2FHA6JKXtfp4Rz%2F5fc2OvrNU5SW22tSAOoprFYF6uDcqf59KSDn0GfwxcV%2FyRfC77JpWA2FZpUVJfd4IyEOUaoqat9%2FYcESqjl9S9tD9MJGe9zPeL8tMUSwv%2FapZh%2FvPd6K4EHtJ9FNIjc%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAUH77HA4VUXJ5NGVR%2F20250710%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20250710T041500Z&X-Amz-SignedHeaders=host&X-Amz-Expires=900&X-Amz-Signature=7f501c1e0c09b9f3ea8787e8a1df9060ba4f6c85252edb974f8023226e9ddcd8",
+    "url": "https://wiz-s3-local-integration-dev-artifacts.s3.eu-west-1.amazonaws.com/6af433d981755808814909f7c8d6ceac29e6373b9c6494e1640f2b91e72cdb10.json?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEMj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCWV1LXdlc3QtMSJGMEQCIGjbnsEPxVXkTW%2Bf1yYtHHcB05eyjx%2FIANmxqsCO6gSHAiBQ4pA%2B7dCBxl%2BbEOCiZZM%2ByGdSN%2F%2FPSnlDh9%2Bis%2BfxxCq7BQjR%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAUaDDI5MjA1NjEzOTU2MyIMxp%2B2VAd9J4W1JBG4Ko8FcMQ%2B1PWV%2BIrZ3ajExnZestt6NlU1MqX8uVN8edxrHupx0nLUu5xXgHZ9e4gEzQ4TOJ%2FPFht7dCvgg6UnFDWQ7qw%2FQMqjtI3WwZhpbjpLei0t%2BcXaJ6qzJk2nVcKMbRxZt7agI3Src8Egx%2BYMvQYri8kM11WgCudD1sKwWUeTMOp4UbewqTuAWbCN9uG%2Fy30%2F%2B6RgZZAttR21PJlsQxqkMc8pwmL0df4zHHxwAH97k9Sx7PcVvAbqWa%2FTgPVIyRHFIunFxGjczHeO7754Qb9DM%2BoSCPTEvvNzWrFS6p4EGMa3r4Uxipk2k%2FjTu%2Fvu770OELldUlRtPfM9XlYue5TnfjCcYPnYgz3G5EGb%2Frndt63c7%2Bb1sh98Ed3KFNmsELPkDsXCe2grgXh1DvJluDfkBQQgoGsFBd1NrLVolzNTPorlEQ1SXy6tq%2BryK8v4Ls2X4Z%2FRitt5PSvkUIHwE0wuwvu4iZ01ylSOC5KotFmc4l4R9U2bNu68xJzveXuoJL5takP6a3ZgupHB09yMInwUwfi6jOLCcRsWyPiPMFZRRNX2ZoHir%2FqmyvdofnWPsjl%2FHolib7FNpuGbxcSqp45%2FvlNUX0YjsOjX7nao2%2BLPjOXCX62VJve9L7SJ%2BRgBfdQnT9mu5syckX9MdTDs4CtK%2BtsSWcUcsLA7b%2FvTOIL5WFHFTK7i4V2RWXMRJvj2XoyBntI8WVtz2eH6o3HclkbEa1nnrLVTZHl7JKNfk2%2FgBUTbksf1mbywRojbTjFTnWoTmnaigbjZAHl3WOVUIB5loi7JxuFJnXltggqnmK5W%2FaHR%2BEnqiaVDok0t7o6a%2FeL2TV0sxmTwgDAaUheZZAUHUE%2FYyiMvzkwoFOr5tEKnyzCAhcPDBjqyASKAJUj3NefYHLEQUO9%2FNPjLY47siPDefDpNyEku5vKD6zoYF2Mt0VjTWgpOQMIlIJyXBGgH%2BnWyasQeSMpfLeLYL%2FViIWMC0qSZrBfoqONEzpLGbN0MnnctKlxS0vhmQIc66w75qWRPHW4j%2FumKbEjrjSq9NM1MU8zBYREdJk1aVloDGpCg3awo9pNNwrakxzlloAP8ePcDo1IQYfyfxzJHzrNZxY9L9oYtli%2FYmmLtBmM%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=ASIAUH77HA4VTNXKFBB2%2F20250711%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20250711T084515Z&X-Amz-SignedHeaders=host&X-Amz-Expires=900&X-Amz-Signature=86e2955da0eb51ae0c28ef9431c4d04a78b36dd2381c2a729606dcfdfc039135",
     "config": {
       "name": "Alfa's little space",
       "home_id": 206812,
@@ -11,7 +11,7 @@
       "udp_signing_key": "0250b91f3aa0449488ef678191d6da1d",
       "version": "1.0",
       "creation_date": "2025-06-04T01:44:10+0000",
-      "update_date": "2025-07-09T01:58:37+0000",
+      "update_date": "2025-07-10T02:41:30+0000",
       "rooms": [
         {
           "room_id": 803004,
@@ -26,6 +26,68 @@
           "type": "OFFICE",
           "creation_date": "2025-07-09T03:53:44+0000",
           "update_date": "2025-07-09T03:53:55+0000"
+        }
+      ],
+      "custom_effects": [
+        {
+          "effect_id": 1001,
+          "device_type": "light",
+          "name": "effect_1",
+          "elm": {
+            "type": 1,
+            "modifier": 2,
+            "gradient": true,
+            "initStep": 1,
+            "rand": 0,
+            "steps": [
+              [0, 255, 0, 0, 0, 0, 0, 50, 500, 500, 0, 0, 0],
+              [0, 0, 255, 0, 0, 0, 0, 50, 500, 500, 0, 0, 0],
+              [0, 0, 0, 255, 0, 0, 0, 50, 500, 500, 0, 0, 0],
+              [0, 0, 0, 0, 255, 0, 0, 50, 500, 500, 0, 0, 0]
+            ]
+          },
+          "state": true,
+          "duration": 10
+        },
+        {
+          "effect_id": 1002,
+          "device_type": "light",
+          "name": "effect_2_sunset_glow",
+          "elm": {
+            "type": 1,
+            "modifier": 2,
+            "gradient": true,
+            "initStep": 1,
+            "rand": 0,
+            "steps": [
+              [0, 255, 69, 0, 0, 0, 0, 80, 1000, 800, 0, 0, 0],
+              [0, 220, 20, 60, 0, 0, 0, 70, 1000, 800, 0, 0, 0],
+              [0, 139, 0, 139, 0, 0, 0, 60, 1000, 800, 0, 0, 0],
+              [0, 75, 0, 130, 0, 0, 0, 50, 1000, 800, 0, 0, 0]
+            ]
+          },
+          "state": true,
+          "duration": 15
+        },
+        {
+          "effect_id": 1003,
+          "device_type": "light",
+          "name": "effect3_ocean_waves",
+          "elm": {
+            "type": 1,
+            "modifier": 1,
+            "gradient": true,
+            "initStep": 1,
+            "rand": 0,
+            "steps": [
+              [0, 0, 105, 148, 0, 0, 0, 60, 800, 600, 0, 0, 0],
+              [0, 0, 191, 255, 0, 0, 0, 60, 800, 600, 0, 0, 0],
+              [0, 30, 144, 255, 0, 0, 0, 80, 800, 600, 0, 0, 0],
+              [0, 0, 105, 148, 0, 0, 0, 60, 800, 600, 0, 0, 0]
+            ]
+          },
+          "state": true,
+          "duration": 12
         }
       ],
       "devices": [
@@ -48,7 +110,7 @@
             "supports_light_mode": true
           },
           "creation_date": "2025-06-19T08:48:19+0000",
-          "update_date": "2025-07-09T21:19:03+0000"
+          "update_date": "2025-07-11T01:10:01+0000"
         },
         {
           "device_id": 1183254,
@@ -69,7 +131,7 @@
             "supports_light_mode": true
           },
           "creation_date": "2025-06-27T03:58:36+0000",
-          "update_date": "2025-07-09T09:57:47+0000"
+          "update_date": "2025-07-11T01:10:01+0000"
         },
         {
           "device_id": 1183255,
@@ -90,7 +152,7 @@
             "supports_light_mode": true
           },
           "creation_date": "2025-06-27T03:58:36+0000",
-          "update_date": "2025-07-09T16:19:33+0000"
+          "update_date": "2025-07-11T01:10:01+0000"
         },
         {
           "device_id": 1183256,
@@ -111,7 +173,7 @@
             "supports_light_mode": true
           },
           "creation_date": "2025-06-27T03:58:37+0000",
-          "update_date": "2025-07-09T09:57:47+0000"
+          "update_date": "2025-07-11T01:10:01+0000"
         },
         {
           "device_id": 1183257,
@@ -132,7 +194,7 @@
             "supports_light_mode": true
           },
           "creation_date": "2025-06-27T03:58:44+0000",
-          "update_date": "2025-07-10T02:41:18+0000"
+          "update_date": "2025-07-11T01:10:01+0000"
         },
         {
           "device_id": 1183258,
@@ -153,7 +215,7 @@
             "supports_light_mode": true
           },
           "creation_date": "2025-06-27T03:58:51+0000",
-          "update_date": "2025-07-09T09:57:48+0000"
+          "update_date": "2025-07-11T01:10:01+0000"
         },
         {
           "device_id": 1183259,
@@ -174,7 +236,7 @@
             "supports_light_mode": true
           },
           "creation_date": "2025-06-27T03:58:52+0000",
-          "update_date": "2025-07-10T02:41:18+0000"
+          "update_date": "2025-07-11T01:10:00+0000"
         },
         {
           "device_id": 1183260,
@@ -195,7 +257,7 @@
             "supports_light_mode": true
           },
           "creation_date": "2025-06-27T03:58:52+0000",
-          "update_date": "2025-07-10T02:41:18+0000"
+          "update_date": "2025-07-11T01:10:01+0000"
         },
         {
           "device_id": 1183261,
@@ -216,7 +278,7 @@
             "supports_light_mode": true
           },
           "creation_date": "2025-06-27T03:59:05+0000",
-          "update_date": "2025-07-10T02:41:18+0000"
+          "update_date": "2025-07-11T01:10:01+0000"
         },
         {
           "device_id": 1183262,
@@ -237,7 +299,7 @@
             "supports_light_mode": true
           },
           "creation_date": "2025-06-27T03:59:17+0000",
-          "update_date": "2025-07-09T09:57:47+0000"
+          "update_date": "2025-07-11T01:10:01+0000"
         },
         {
           "device_id": 1183263,
@@ -258,7 +320,7 @@
             "supports_light_mode": true
           },
           "creation_date": "2025-06-27T03:59:29+0000",
-          "update_date": "2025-07-09T09:57:47+0000"
+          "update_date": "2025-07-11T01:10:01+0000"
         },
         {
           "device_id": 1183264,
@@ -279,7 +341,7 @@
             "supports_light_mode": true
           },
           "creation_date": "2025-06-27T03:59:37+0000",
-          "update_date": "2025-07-10T02:41:18+0000"
+          "update_date": "2025-07-11T01:10:01+0000"
         },
         {
           "device_id": 1183265,
@@ -300,7 +362,7 @@
             "supports_light_mode": true
           },
           "creation_date": "2025-06-27T03:59:45+0000",
-          "update_date": "2025-07-09T09:57:47+0000"
+          "update_date": "2025-07-11T01:10:00+0000"
         },
         {
           "device_id": 1183266,
@@ -321,7 +383,7 @@
             "supports_light_mode": true
           },
           "creation_date": "2025-06-27T03:59:53+0000",
-          "update_date": "2025-07-09T09:57:47+0000"
+          "update_date": "2025-07-11T01:10:01+0000"
         },
         {
           "device_id": 1183267,
@@ -342,7 +404,7 @@
             "supports_light_mode": true
           },
           "creation_date": "2025-06-27T04:00:01+0000",
-          "update_date": "2025-07-09T09:57:47+0000"
+          "update_date": "2025-07-11T01:10:01+0000"
         },
         {
           "device_id": 1183268,
@@ -363,7 +425,7 @@
             "supports_light_mode": true
           },
           "creation_date": "2025-06-27T04:05:19+0000",
-          "update_date": "2025-07-09T09:57:47+0000"
+          "update_date": "2025-07-11T01:10:01+0000"
         },
         {
           "device_id": 1183269,
@@ -384,7 +446,7 @@
             "supports_light_mode": true
           },
           "creation_date": "2025-06-27T04:05:28+0000",
-          "update_date": "2025-07-10T02:41:18+0000"
+          "update_date": "2025-07-11T01:10:01+0000"
         },
         {
           "device_id": 1183270,
@@ -405,7 +467,7 @@
             "supports_light_mode": true
           },
           "creation_date": "2025-06-27T04:10:31+0000",
-          "update_date": "2025-07-09T09:57:47+0000"
+          "update_date": "2025-07-11T01:10:00+0000"
         },
         {
           "device_id": 1183271,
@@ -426,7 +488,7 @@
             "supports_light_mode": true
           },
           "creation_date": "2025-06-27T04:10:31+0000",
-          "update_date": "2025-07-10T02:41:18+0000"
+          "update_date": "2025-07-11T01:10:01+0000"
         },
         {
           "device_id": 1183272,
@@ -447,7 +509,7 @@
             "supports_light_mode": true
           },
           "creation_date": "2025-06-27T04:10:32+0000",
-          "update_date": "2025-07-09T09:57:46+0000"
+          "update_date": "2025-07-11T01:10:01+0000"
         },
         {
           "device_id": 1183273,
@@ -468,7 +530,7 @@
             "supports_light_mode": true
           },
           "creation_date": "2025-06-27T05:23:03+0000",
-          "update_date": "2025-07-10T02:41:18+0000"
+          "update_date": "2025-07-11T01:10:02+0000"
         },
         {
           "device_id": 1183274,
@@ -489,7 +551,7 @@
             "supports_light_mode": true
           },
           "creation_date": "2025-06-27T05:23:40+0000",
-          "update_date": "2025-07-10T02:41:18+0000"
+          "update_date": "2025-07-11T01:10:01+0000"
         },
         {
           "device_id": 1183405,
@@ -510,7 +572,7 @@
             "supports_light_mode": true
           },
           "creation_date": "2025-07-09T01:38:54+0000",
-          "update_date": "2025-07-09T09:57:48+0000"
+          "update_date": "2025-07-11T01:10:01+0000"
         },
         {
           "device_id": 1183406,
@@ -531,7 +593,7 @@
             "supports_light_mode": true
           },
           "creation_date": "2025-07-09T01:38:54+0000",
-          "update_date": "2025-07-09T09:57:48+0000"
+          "update_date": "2025-07-11T01:10:01+0000"
         },
         {
           "device_id": 1183407,
@@ -552,7 +614,7 @@
             "supports_light_mode": true
           },
           "creation_date": "2025-07-09T01:41:46+0000",
-          "update_date": "2025-07-09T09:57:48+0000"
+          "update_date": "2025-07-11T08:25:59+0000"
         },
         {
           "device_id": 1183408,
@@ -573,7 +635,7 @@
             "supports_light_mode": true
           },
           "creation_date": "2025-07-09T01:41:46+0000",
-          "update_date": "2025-07-09T09:57:48+0000"
+          "update_date": "2025-07-11T01:10:01+0000"
         },
         {
           "device_id": 1183409,
@@ -594,7 +656,7 @@
             "supports_light_mode": true
           },
           "creation_date": "2025-07-09T01:43:56+0000",
-          "update_date": "2025-07-10T01:44:05+0000"
+          "update_date": "2025-07-11T01:10:00+0000"
         },
         {
           "device_id": 1183410,
@@ -615,7 +677,7 @@
             "supports_light_mode": true
           },
           "creation_date": "2025-07-09T01:47:19+0000",
-          "update_date": "2025-07-09T09:57:48+0000"
+          "update_date": "2025-07-10T09:21:51+0000"
         },
         {
           "device_id": 1183411,
@@ -636,7 +698,7 @@
             "supports_light_mode": true
           },
           "creation_date": "2025-07-09T01:50:03+0000",
-          "update_date": "2025-07-09T09:57:48+0000"
+          "update_date": "2025-07-11T01:10:00+0000"
         },
         {
           "device_id": 1183412,
@@ -657,10 +719,10 @@
             "supports_light_mode": true
           },
           "creation_date": "2025-07-09T01:54:17+0000",
-          "update_date": "2025-07-09T09:57:48+0000"
+          "update_date": "2025-07-11T01:10:01+0000"
         }
       ]
     },
-    "downloaded_at": 174608.952463795
+    "downloaded_at": 277151.228252621
   }
 }
